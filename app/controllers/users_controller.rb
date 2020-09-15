@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_url
+      redirect_to users_path(@user)
       flash[:success] = 'User creation unsuccessful.'
     else
       flash.now[:alert] = 'User creation unsuccessful.'
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @user = User.find(params[:format])
   end
 
   private
