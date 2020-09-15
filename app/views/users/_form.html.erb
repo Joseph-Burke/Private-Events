@@ -1,11 +1,7 @@
 <h1>Sign Up Form</h1>
 
-<%= form_with(url: "/", method: "post") do %>
-  <%= label_tag(:q, "Username") %>
-  <%= text_field_tag(:q) %>
-  <%= label_tag(:q, "Email") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Submit") %>
+<%= form_with model: @user do |f| %>
+  <%= f.label :name, "Username"  %>
+  <%= f.text_field :name %>
+  <%= f.submit "Submit" %>
 <% end %>
-
-
