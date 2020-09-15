@@ -1,3 +1,11 @@
-<h1>Form!</h1>
+<h1>Sign Up Form</h1>
 
-<p>Hello, this is some text</p>
+<%= form_with(url: "/", method: "post") do %>
+  <%= label_tag(:q, "Username") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag(:q, "Email") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+
