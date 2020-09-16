@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   # 'post''session#create'
   # 'get''session#new'
   # 'get''session#destroy'
-  get 'sessions/new', to: 'sessions#new' 
+  get 'sessions/new', to: 'sessions#new'
   post 'sessions', to: 'sessions#create'
   delete 'sessions', to: 'sessions#destroy'
-  
 end

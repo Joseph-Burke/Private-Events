@@ -2,4 +2,4 @@
 
 <h1><%= session[:user_id]%></h1>
 
-<%= button_to "Log Out" , action: "destroy" %>
+<%= button_to "Log Out", '/sessions', { method: :delete} %>
