@@ -1,0 +1,5 @@
+<%= form_with(url: './new', model: @event, action: 'post') do |f| %>
+  <%= f.text_field :name %>
+  <%= f.date_field :date %>
+  <%= f.submit %>
+<% end %>
