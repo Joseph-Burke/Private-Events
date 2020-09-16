@@ -1,3 +1,10 @@
 <h1>
   <%= "You're looking at #{@user.name}'s page!" %>
 </h1>
+
+<div>
+<% @user.events.each do |item| %>
+  <p><%= item.name%></p>
+   <p><%= item.date%></p>
+<% end %>
+</div>
