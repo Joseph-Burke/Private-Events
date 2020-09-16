@@ -1,5 +1,6 @@
 <% @events.each do |event| %>
-  <p>
-    <%= event.name %> is happening! The date of the event is <%= event.date %>!
-  </p>
+  <div>
+    <h5><%= event.creator.name %></h5>
+    <p><%= event.description %></p>
+  </div>
 <% end %>

@@ -1,4 +1,9 @@
 class EventsController < ApplicationController
+  
+  def index
+    @events = Event.all
+  end
+
   def new
     @event = User.find(session[:user_id]).events.build
   end
@@ -8,9 +13,6 @@ class EventsController < ApplicationController
     redirect_to events_path if @event.save
   end
 
-  def index
-    @events = Event.all
-  end
 
   def show
     @event = Event.find(params[:id])
@@ -19,6 +21,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :date)
+    params.require(:event).permit(:description)
   end
 end
