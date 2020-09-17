@@ -1,10 +1,9 @@
 class EventsController < ApplicationController
-  
+   
   def index
-    @events = Event.all
-    @past_events = Event.all.select { |event| event.date < Date.today }
-    @upcoming_events = Event.all.select { |event| event.date >= Date.today }
+    @events = Event.all 
   end
+  
 
   def new
     @event = Event.new
