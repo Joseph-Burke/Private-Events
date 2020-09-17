@@ -7,12 +7,15 @@ class Event < ApplicationRecord
   has_many :attendees, through: :event_attendees
   
    
-  def Event.past
-    Event.all.select { |event| event.date < Date.today }
-  end
+  # def Event.past
+  #   Event.all.select { |event| event.date < Date.today }
+  # end
   
-  def Event.upcoming
-    Event.all.select { |event| event.date >= Date.today }
-  end
+  # def Event.upcoming
+    
+  # end
+  
+  scope :past, -> {Event.all.select { |event| event.date < Date.today }}
+  scope :upcoming , -> {Event.all.select { |event| event.date >= Date.today }}
   
 end
