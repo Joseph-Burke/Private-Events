@@ -1,5 +1,5 @@
 <h1>
-  <%= "You're looking at #{@user.name}'s page!" %>
+  <%= "This is a list of all #{@user.name}'s Events" %>
 </h1>
 
 <div>
@@ -12,7 +12,7 @@
 </div>
 
 <div>
-  <h6>Previously attended events</h6>
+  <h6>Previously Attended Events</h6>
   <ul>
     <% @user.attended_events.each do |event| %>
       <% if event.date < Date.today %>

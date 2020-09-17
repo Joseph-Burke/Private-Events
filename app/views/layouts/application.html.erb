@@ -13,14 +13,18 @@
 
     <nav class="navbar">
       <ul>
+        <% unless session[:user_id].nil? %>
         <li>
           <%= link_to "Create a new event", events_new_path %>
         </li>
+        <% end %>
 
+        <% unless session[:user_id].nil? %>
         <li>
           <%= link_to "View all events", events_path  %>
         </li>
-
+        <% end %>
+        
         <% unless session[:user_id].nil? %>
           <li><%= link_to "View your events", user_path(session[:user_id])  %></li>
         <% end %>

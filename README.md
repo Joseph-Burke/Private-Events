@@ -2,10 +2,7 @@
 
 > Private Events is a web application built in Ruby on Rails that allows users to create events and send invitations for those events to other users. 
 
-![screenshot](./app_screenshot.png)
-![](app/assets/images/)
-![](app/assets/images/)
-
+![A Signed In User's Page](app/assets/images/User's-page.png)
  
  This project is designed to demonstrate proficiency in managing complex data relationships in the Rails framework.
 
