@@ -14,24 +14,21 @@
  *= require_self
  */
 
- .navbar ul {
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   
-   li {
-     flex: 1;
-     border: 1px solid black;
-     list-style: none;
-     text-align: center;
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
-     a {
-       height: 100%;
-       width: 100%;
-      //  justify-content: center;
-      //  text-align: center;
-       font-size: 2rem;
-     }
-   }
-   
- }
+  li {
+    flex: 1;
+    border: 1px solid black;
+    list-style: none;
+    text-align: center;
+
+    a {
+      height: 100%;
+      width: 100%;
+      font-size: 2rem;
+    }
+  }
+}

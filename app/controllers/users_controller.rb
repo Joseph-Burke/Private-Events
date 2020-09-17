@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-# No method error for #create. Therefore, @user is currently nil.
+  # No method error for #create. Therefore, @user is currently nil.
 
   def create
     @user = User.new(user_params)
