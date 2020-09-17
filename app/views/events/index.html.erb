@@ -2,7 +2,7 @@
   <h3>Past Events</h3>
   <ul>
     <% Event.past.each do |event| %>
-      <%= event.description %>
+      <li><%= event.description %></li>
     <% end %>
   </ul>
 </div>
@@ -11,7 +11,7 @@
   <h3>Upcoming Events</h3>
   <ul>
     <% Event.upcoming.each do |event| %>
-      <%= event.description %>
+      <li><%= event.description %></li>
     <% end %>
   </ul>
 </div>
