@@ -2,14 +2,16 @@ class EventsController < ApplicationController
   
   def index
     @events = Event.all
+    @past_events = Event.all.select { |event| event.date < Date.today }
+    @upcoming_events = Event.all.select { |event| event.date >= Date.today }
   end
 
   def new
-    @event = User.find(session[:user_id]).events.build
+    @event = Event.new
   end
 
   def create
-    @event = User.find(session[:user_id]).events.build(event_params)
+    @event = User.find(session[:user_id]).events.build(event_params) unless session[:user_id].nil?
     redirect_to events_path if @event.save
   end
 
@@ -21,6 +23,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:description)
+    params.require(:event).permit(:description, :date)
   end
 end

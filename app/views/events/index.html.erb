@@ -1,6 +1,17 @@
-<% @events.each do |event| %>
-  <div>
-    <h5><%= event.creator.name %></h5>
-    <p><%= event.description %></p>
-  </div>
-<% end %>
+<div>
+  <h3>Past Events</h3>
+  <ul>
+    <% @past_events.each do |event| %>
+      <%= event.description %>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h3>Upcoming Events</h3>
+  <ul>
+    <% @upcoming_events.each do |event| %>
+      <%= event.description %>
+    <% end %>
+  </ul>
+</div>

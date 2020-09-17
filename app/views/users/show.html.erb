@@ -3,7 +3,32 @@
 </h1>
 
 <div>
-<% @user.events.each do |event| %>
-  <p><%= event.description%></p>
-<% end %>
+  <h6>Created Events</h6>
+  <ul>
+    <% @user.events.each do |event| %>
+      <li><%= event.description%></li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h6>Previously attended events</h6>
+  <ul>
+    <% @user.attended_events.each do |event| %>
+      <% if event.date < Date.today %>
+        <li><%= event.description %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h6>Upcoming Events</h6>
+  <ul>
+    <% @user.attended_events.each do |event| %>
+      <% if event.date >= Date.today %>
+        <li><%= event.description %></li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>

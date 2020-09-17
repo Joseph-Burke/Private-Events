@@ -1,4 +1,7 @@
 <%= form_with(url: './new', model: @event, action: 'post') do |f| %>
   <%= f.text_area :description %></br>
+  <%= f.date_field :date %></br>
   <%= f.submit %>
 <% end %>
+
+
