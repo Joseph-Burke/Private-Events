@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   post 'events/new', to: 'events#create'
   get 'events', to: 'events#index'
   get 'events/:id', to: 'events#show'
+  root to: 'events#index'
 end
