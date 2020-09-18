@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   post 'sessions', to: 'sessions#create'
   delete 'sessions', to: 'sessions#destroy'
   # EventsController routes
-  get 'events/new', to: 'events#new'
-  post 'events/new', to: 'events#create'
-  get 'events', to: 'events#index'
-  get 'events/:id', to: 'events#show'
+  resources :events, only: [:new, :create, :show, :index]
   root to: 'events#index'
 end
