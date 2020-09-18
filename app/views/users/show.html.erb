@@ -1,0 +1,34 @@
+<h1>
+  <%= "This is a list of all #{@user.name}'s Events" %>
+</h1>
+
+<div>
+  <h6>Created Events</h6>
+  <ul>
+    <% @user.events.each do |event| %>
+      <li><%= event.description%></li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h6>Previously Attended Events</h6>
+  <ul>
+    <% @user.attended_events.each do |event| %>
+      <% if event.date < Date.today %>
+        <li><%= event.description %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h6>Upcoming Events</h6>
+  <ul>
+    <% @user.attended_events.each do |event| %>
+      <% if event.date >= Date.today %>
+        <li><%= event.description %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
