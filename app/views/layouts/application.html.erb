@@ -15,7 +15,7 @@
       <ul>
         <% unless session[:user_id].nil? %>
         <li>
-          <%= link_to "Create a new event", events_new_path %>
+          <%= link_to "Create a new event", new_event_path %>
         </li>
         <% end %>
 
